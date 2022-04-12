@@ -1,0 +1,153 @@
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+
+}
+
+body,html{
+
+    height: 100vh; 
+
+
+}
+
+body{
+
+    background-image: linear-gradient(45deg , #09615A, #10ADA0 ) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+
+    width: 300px;
+        
+    height: 300px; 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.card{
+    border: 3px solid white; 
+    position: relative; 
+
+}
+
+
+.card:nth-child(1),
+.card:nth-child(2),
+.card:nth-child(3){
+
+    border-top : none; 
+
+}
+
+
+.card:nth-child( 3),
+.card:nth-child(6),
+.card:nth-child(9){
+
+    border-right : none; 
+
+}
+
+
+.card:nth-child(1),
+.card:nth-child(4),
+.card:nth-child(7){
+
+    border-left : none; 
+
+}
+
+
+.card:nth-child(7),
+.card:nth-child(8),
+.card:nth-child(9){
+
+    border-bottom : none; 
+
+}
+
+/* x Para o game */ 
+
+.x::after,.x::before{
+
+    content: ''; 
+    background-color: white;
+    height: 20px; 
+    width: 50px;
+    border-radius: 12px;
+    position: absolute  ;
+    top: 30px ;
+    left: 15px;
+    transform: translate(-50%, -50%) ; 
+}
+
+
+.x::after{
+
+    transform: rotate(45deg); 
+
+}
+
+
+.x::before{
+    
+    transform: rotate(-45deg); 
+
+}
+
+/*Circulo */
+.circulo::after{
+    content: ''; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    background-color: white ;   
+
+}
+
+
+h1,span{
+
+    color: white; 
+
+
+}
+.MensagemFinal{
+
+
+    position: absolute; 
+    background-color: rgba(0,0,0,0.5); 
+    top: 0; 
+    right: 0;
+    left: 0; 
+    bottom: 0; 
+    height: 100%; 
+    display: none; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column ;
+    gap: 12px; 
+
+
+}
+
+
+button{
+
+    padding: 15px 20px; 
+    font-size: 20px;
+    background-color: #076ABA;
+    color: white; 
+    border: 0; 
+
+}
